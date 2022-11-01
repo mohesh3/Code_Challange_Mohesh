@@ -1,26 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.posts.Users.Controller.userControllerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.415 s <<< FAILURE! - in com.posts.Users.Controller.userControllerTest
-userIdCount_test  Time elapsed: 0.378 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.posts.Users.Controller.userControllerTest.userIdCount_test(userControllerTest.java:31)
-
-userIdCount_NullpointerException_test  Time elapsed: 0.032 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnfinishedStubbingException: 
-
-Unfinished stubbing detected here:
--> at com.posts.Users.Controller.userControllerTest.userIdCount_NullpointerException_test(userControllerTest.java:43)
-
-E.g. thenReturn() may be missing.
-Examples of correct stubbing:
-    when(mock.isOk()).thenReturn(true);
-    when(mock.isOk()).thenThrow(exception);
-    doThrow(exception).when(mock).someVoidMethod();
-Hints:
- 1. missing thenReturn()
- 2. you are trying to stub a final method, which is not supported
- 3. you are stubbing the behaviour of another mock inside before 'thenReturn' instruction is completed
-
-	at com.posts.Users.Controller.userControllerTest.userIdCount_NullpointerException_test(userControllerTest.java:43)
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.362 s - in com.posts.Users.Controller.userControllerTest

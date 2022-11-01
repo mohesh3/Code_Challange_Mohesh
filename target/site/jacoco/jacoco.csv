@@ -1,5 +1,5 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 Users,com.posts.Users,UsersApplication,5,3,0,0,2,1,1,1,1,1
-Users,com.posts.Users.Entity,userEntity,207,3,38,0,6,1,32,1,13,1
-Users,com.posts.Users.Controller,userController,10,3,0,0,2,1,2,1,2,1
-Users,com.posts.Users.Service,userService,257,7,0,0,30,3,12,1,12,1
+Users,com.posts.Users.Entity,userEntity,0,31,0,0,0,6,0,9,0,9
+Users,com.posts.Users.Controller,userController,0,11,0,0,0,3,0,3,0,3
+Users,com.posts.Users.Service,userService,92,7,0,0,19,3,4,1,4,1

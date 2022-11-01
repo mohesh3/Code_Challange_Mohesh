@@ -7,8 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-@Data
-@AllArgsConstructor
+@Setter
+@Getter
+//@AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 
