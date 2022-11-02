@@ -9,7 +9,6 @@ import javax.persistence.Id;
 @Entity
 @Setter
 @Getter
-//@AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 
