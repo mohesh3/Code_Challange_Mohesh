@@ -1,7 +1,7 @@
 package com.posts.Users.Controller;
 
-import com.posts.Users.Entity.userEntity;
-import com.posts.Users.Service.userService;
+import com.posts.Users.Entity.UserEntity;
+import com.posts.Users.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,21 +12,21 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/userDetails")
-public class userController
+public class UserController
 {
     @Autowired
-    userService uservice;
+    UserService service;
 
     @GetMapping("/userIdCount")
     public Map<String, Integer> userIdCount()
     {
-        return uservice.userIdCount();
+        return service.userIdCount();
     }
 
     @GetMapping("/ChangedData")
-    public List<userEntity> changedData()
+    public List<UserEntity> changedData()
     {
-        return uservice.changeData();
+        return service.changeData();
     }
 
 }

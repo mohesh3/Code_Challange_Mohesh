@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 
-public class userEntity{
+public class UserEntity {
     @Id
     private int userId;
     private Long id;

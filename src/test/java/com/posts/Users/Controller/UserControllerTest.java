@@ -1,34 +1,33 @@
 package com.posts.Users.Controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.posts.Users.Entity.userEntity;
-import com.posts.Users.Service.userService;
+import com.posts.Users.Entity.UserEntity;
+import com.posts.Users.Service.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 @ExtendWith(MockitoExtension.class)
-class userControllerTest {
+class UserControllerTest
+{
     @InjectMocks
-    userController controller;
+    UserController controller;
 
     @Mock
-    userService service;
-    RestTemplate restTemplate;
-
+    UserService service;
 
     @Test
-    void userIdCount_test() throws JsonProcessingException {
-        List<userEntity> list=new ArrayList<userEntity>();
-        userEntity user1=new userEntity();
+    void userIdCount_test()
+    {
+        List<UserEntity> list= new ArrayList<>();
+        UserEntity user1=new UserEntity();
         user1.setId(1L);
         user1.setUserId(1);
         user1.setTitle("1800 Flowers");
@@ -36,9 +35,9 @@ class userControllerTest {
         list.add(user1);
         assertNotNull(list);
         assertEquals(1,list.size());
-        Map<Integer, List<userEntity>> map = list.stream().collect(Collectors.groupingBy(userEntity::getUserId));
+        Map<Integer, List<UserEntity>> map = list.stream().collect(Collectors.groupingBy(UserEntity::getUserId));
         Map<String, Integer> map1 = new HashMap<>();
-        map.forEach((k, v) -> {map1.put("userId " + k, v.size());});
+        map.forEach((k, v) -> map1.put("userId " + k, v.size()));
         assertNotNull(map1);
         assertEquals(1,map1.size());
         Mockito.when(service.userIdCount()).thenReturn(map1);
@@ -48,10 +47,11 @@ class userControllerTest {
     }
 
     @Test
-    void changedData_test() throws JsonProcessingException {
-        userEntity user = new userEntity();
-        List<userEntity> list = new ArrayList<>(Arrays.asList((user)));
-        userEntity user1=new userEntity();
+    void changedData_test()
+    {
+        UserEntity user = new UserEntity();
+        List<UserEntity> list = new ArrayList<>(List.of((user)));
+        UserEntity user1=new UserEntity();
         user1.setId(1L);
         user1.setUserId(1);
         user1.setTitle("1800 Flowers");
